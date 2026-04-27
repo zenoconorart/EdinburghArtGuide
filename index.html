@@ -18,6 +18,7 @@
     <meta name="twitter:title" content="Edinburgh Art Guide" />
     <meta name="twitter:description" content="A simple visual guide to exhibitions, galleries and creative classes in Edinburgh." />
     <link rel="stylesheet" href="./styles.css?v=20260427-2" />
+    <link rel="stylesheet" href="./search-filter.css?v=20260427-1" />
   </head>
   <body>
     <header class="topbar">
@@ -38,9 +39,16 @@
           <p>Exhibitions, galleries, painting, sculpture, printmaking, photography and creative classes across the city.</p>
           <form class="search-wrap" id="searchForm" role="search">
             <label class="visually-hidden" for="searchFilter">Search exhibitions, galleries, artists or venues</label>
-            <span aria-hidden="true">⌕</span>
+            <span class="search-glyph" aria-hidden="true">⌕</span>
             <input id="searchFilter" type="search" placeholder="Search exhibitions, galleries, artists or venues..." autocomplete="off" />
-            <button type="submit">Search</button>
+            <button class="filter-toggle" id="searchFilterToggle" type="button" aria-label="Open filters" aria-controls="filters" aria-expanded="false" title="Filters">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="8" cy="7" r="2.25"></circle>
+                <line x1="11.5" y1="7" x2="19" y2="7"></line>
+                <line x1="5" y1="17" x2="12.5" y2="17"></line>
+                <circle cx="16" cy="17" r="2.25"></circle>
+              </svg>
+            </button>
           </form>
           <nav class="quick-pills" aria-label="Quick browse">
             <button class="pill is-active" data-filter-type="view" data-filter-value="exhibitions" type="button">🖼️ Exhibitions</button>
@@ -108,5 +116,6 @@
     </template>
 
     <script src="./app.js?v=20260427-2" defer></script>
+    <script src="./filter-toggle.js?v=20260427-1" defer></script>
   </body>
 </html>
