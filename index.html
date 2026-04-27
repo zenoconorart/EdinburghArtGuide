@@ -18,7 +18,7 @@
     <meta name="twitter:title" content="Edinburgh Art Guide" />
     <meta name="twitter:description" content="A simple visual guide to exhibitions, galleries and creative classes in Edinburgh." />
     <link rel="stylesheet" href="./styles.css?v=20260428-1" />
-    <link rel="stylesheet" href="./search-filter.css?v=20260428-1" />
+    <link rel="stylesheet" href="./search-filter.css?v=20260428-2" />
   </head>
   <body>
     <header class="topbar">
@@ -50,6 +50,19 @@
               </svg>
             </button>
           </form>
+
+          <details class="filter-drawer compact-filters" id="filters">
+            <summary>More filters</summary>
+            <div class="filter-row">
+              <label>What<select id="viewFilter"><option value="exhibitions" selected>Exhibitions</option><option value="all">Everything</option><option value="galleries">Galleries</option><option value="classes">Classes</option></select></label>
+              <label>When<select id="timeFilter"><option value="now" selected>Happening now</option><option value="upcoming">Upcoming</option><option value="all-current">Now and upcoming</option><option value="past">Past</option></select></label>
+              <label>Price<select id="priceFilter"><option value="all">Any price</option><option value="free">Free</option><option value="paid">Paid</option><option value="varies">Check source</option></select></label>
+              <label>Area<select id="areaFilter"><option value="all">All areas</option></select></label>
+              <label>Venue<select id="venueFilter"><option value="all">All venues</option></select></label>
+              <label>Category<select id="tagFilter"><option value="all">All categories</option><option value="painting">Painting</option><option value="sculpture">Sculpture</option><option value="photography">Photography</option><option value="printmaking">Printmaking</option><option value="textiles">Textiles</option><option value="installation">Installation</option><option value="classes">Classes</option><option value="opening">Openings</option><option value="family">Family</option><option value="outdoors">Outdoors</option></select></label>
+            </div>
+          </details>
+
           <nav class="quick-pills" aria-label="Quick browse">
             <button class="pill is-active" data-filter-type="view" data-filter-value="exhibitions" type="button">🖼️ Exhibitions</button>
             <button class="pill" data-filter-type="view" data-filter-value="galleries" type="button">🏛️ Galleries</button>
@@ -65,18 +78,6 @@
           <span class="hill"></span>
         </div>
       </section>
-
-      <details class="filter-drawer compact-filters" id="filters">
-        <summary>More filters</summary>
-        <div class="filter-row">
-          <label>What<select id="viewFilter"><option value="exhibitions" selected>Exhibitions</option><option value="all">Everything</option><option value="galleries">Galleries</option><option value="classes">Classes</option></select></label>
-          <label>When<select id="timeFilter"><option value="now" selected>Happening now</option><option value="upcoming">Upcoming</option><option value="all-current">Now and upcoming</option><option value="past">Past</option></select></label>
-          <label>Price<select id="priceFilter"><option value="all">Any price</option><option value="free">Free</option><option value="paid">Paid</option><option value="varies">Check source</option></select></label>
-          <label>Area<select id="areaFilter"><option value="all">All areas</option></select></label>
-          <label>Venue<select id="venueFilter"><option value="all">All venues</option></select></label>
-          <label>Category<select id="tagFilter"><option value="all">All categories</option><option value="painting">Painting</option><option value="sculpture">Sculpture</option><option value="photography">Photography</option><option value="printmaking">Printmaking</option><option value="textiles">Textiles</option><option value="installation">Installation</option><option value="classes">Classes</option><option value="opening">Openings</option><option value="family">Family</option><option value="outdoors">Outdoors</option></select></label>
-        </div>
-      </details>
 
       <section class="section-head">
         <div>
