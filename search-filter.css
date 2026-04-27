@@ -1,14 +1,28 @@
 .search-wrap {
+  position: relative;
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 0;
   border-radius: 16px;
-  padding: 0 6px 0 0;
+  padding: 0 64px 0 0;
+}
+
+.search-wrap::after {
+  content: '→';
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-52%);
+  color: var(--purple);
+  font-size: 2rem;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .search-wrap .search-glyph {
   padding: 0 0 0 20px;
   color: var(--purple);
-  font-size: 1.35rem;
+  font-size: 1.7rem;
+  line-height: 1;
 }
 
 .search-wrap input {
@@ -16,6 +30,7 @@
 }
 
 .search-wrap .filter-toggle {
+  position: relative;
   align-self: center;
   display: inline-flex;
   align-items: center;
@@ -23,18 +38,27 @@
   width: 46px;
   height: 46px;
   padding: 0;
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: 13px;
-  background: #f4f0ff;
-  color: var(--ink);
+  background: transparent;
+  color: var(--purple);
   cursor: pointer;
   box-shadow: none;
 }
 
+.search-wrap .filter-toggle::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 9px;
+  bottom: 9px;
+  width: 1px;
+  background: var(--line-strong);
+}
+
 .search-wrap .filter-toggle:hover,
 .search-wrap .filter-toggle:focus-visible {
-  background: #ebe4ff;
-  border-color: rgba(107, 63, 214, 0.28);
+  background: #f4f0ff;
   outline: none;
 }
 
@@ -43,8 +67,8 @@
 }
 
 .search-wrap .filter-toggle svg {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   stroke: currentColor;
   stroke-width: 2.2;
   stroke-linecap: round;
@@ -54,21 +78,58 @@
 
 .search-wrap .filter-toggle[aria-expanded="true"] {
   background: linear-gradient(135deg, var(--purple), var(--purple-2));
-  border-color: transparent;
   color: #fff;
 }
 
 .compact-filters {
   scroll-margin-top: 18px;
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.compact-filters > summary {
+  display: none;
+}
+
+.compact-filters:not([open]) {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.compact-filters[open] {
+  margin-top: 18px;
+}
+
+.compact-filters[open] .filter-row {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--soft-shadow);
 }
 
 @media(max-width:620px){
   .search-wrap {
     grid-template-columns: auto minmax(0, 1fr) auto;
+    padding-right: 56px;
+  }
+
+  .search-wrap::after {
+    right: 17px;
+    font-size: 1.8rem;
+  }
+
+  .search-wrap .search-glyph {
+    font-size: 1.5rem;
   }
 
   .search-wrap .filter-toggle {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
   }
 }
