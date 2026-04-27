@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Edinburgh Art Guide | Exhibitions, Galleries & Creative Classes</title>
+    <meta name="description" content="A visual guide to Edinburgh exhibitions, galleries, painting, sculpture, printmaking, photography and creative classes." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://edinburghartguide.co.uk/" />
+    <meta name="theme-color" content="#f8f6fb" />
+    <meta property="og:title" content="Edinburgh Art Guide" />
+    <meta property="og:description" content="Find exhibitions, galleries, visual arts events and creative classes in Edinburgh." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://edinburghartguide.co.uk/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Edinburgh Art Guide" />
+    <meta name="twitter:description" content="A simple visual guide to exhibitions, galleries and creative classes in Edinburgh." />
+    <link rel="stylesheet" href="./styles.css?v=20260427-1" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Edinburgh Art Guide home">
+        <span class="brand-mark">🎨</span>
+        <span><strong>Edinburgh Art Guide</strong><small>Visual arts listings for Edinburgh</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="live-count">⚡ <strong id="liveCount">0</strong> happening now</span>
+        <button class="menu-button" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <h1 id="heroTitle">Find art in Edinburgh</h1>
+          <p>Exhibitions, galleries, painting, sculpture, printmaking, photography and creative classes across the city.</p>
+          <form class="search-wrap" id="searchForm" role="search">
+            <label class="visually-hidden" for="searchFilter">Search exhibitions, galleries, artists or venues</label>
+            <span aria-hidden="true">⌕</span>
+            <input id="searchFilter" type="search" placeholder="Search exhibitions, galleries, artists or venues..." autocomplete="off" />
+            <button type="submit">Search</button>
+          </form>
+          <nav class="quick-pills" aria-label="Quick browse">
+            <button class="pill is-active" data-filter-type="view" data-filter-value="exhibitions" type="button">🖼️ Exhibitions</button>
+            <button class="pill" data-filter-type="view" data-filter-value="galleries" type="button">🏛️ Galleries</button>
+            <button class="pill" data-filter-type="price" data-filter-value="free" type="button">💚 Free</button>
+            <button class="pill" data-filter-type="tag" data-filter-value="opening" type="button">🥂 Openings</button>
+            <button class="pill" data-filter-type="tag" data-filter-value="classes" type="button">🎨 Classes</button>
+            <button class="pill" data-filter-type="tag" data-filter-value="outdoors" type="button">🌿 Outdoors</button>
+          </nav>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="sun"></span>
+          <span class="monument"><i></i><i></i><i></i><i></i></span>
+          <span class="hill"></span>
+        </div>
+      </section>
+
+      <section class="browse" aria-labelledby="browseTitle">
+        <h2 id="browseTitle">Browse by</h2>
+        <div class="browse-grid">
+          <button class="browse-card" data-drawer-target="areaFilter" type="button"><span>⌖</span><strong>Area</strong><small>Explore art by Edinburgh neighbourhood</small></button>
+          <button class="browse-card" data-drawer-target="priceFilter" type="button"><span>◇</span><strong>Price</strong><small>Find free and ticketed exhibitions</small></button>
+          <button class="browse-card" data-drawer-target="venueFilter" type="button"><span>🏛️</span><strong>Venue</strong><small>See what is on at galleries and spaces</small></button>
+          <button class="browse-card" data-drawer-target="tagFilter" type="button"><span>▦</span><strong>Category</strong><small>Painting, photography, sculpture and more</small></button>
+        </div>
+        <details class="filter-drawer" id="filters">
+          <summary>Refine search</summary>
+          <div class="filter-row">
+            <label>What<select id="viewFilter"><option value="exhibitions" selected>Exhibitions</option><option value="all">Everything</option><option value="galleries">Galleries</option><option value="classes">Classes</option></select></label>
+            <label>When<select id="timeFilter"><option value="now" selected>Happening now</option><option value="upcoming">Upcoming</option><option value="all-current">Now and upcoming</option><option value="past">Past</option></select></label>
+            <label>Price<select id="priceFilter"><option value="all">Any price</option><option value="free">Free</option><option value="paid">Paid</option><option value="varies">Check source</option></select></label>
+            <label>Area<select id="areaFilter"><option value="all">All areas</option></select></label>
+            <label>Venue<select id="venueFilter"><option value="all">All venues</option></select></label>
+            <label>Category<select id="tagFilter"><option value="all">All categories</option><option value="painting">Painting</option><option value="sculpture">Sculpture</option><option value="photography">Photography</option><option value="printmaking">Printmaking</option><option value="textiles">Textiles</option><option value="installation">Installation</option><option value="classes">Classes</option><option value="opening">Openings</option><option value="family">Family</option><option value="outdoors">Outdoors</option></select></label>
+          </div>
+        </details>
+      </section>
+
+      <section class="class-banner" id="classes">
+        <div>
+          <p class="kicker">Coming soon</p>
+          <h2>Art classes and creative workshops</h2>
+          <p>Learn drawing, painting, tattoo design, printmaking and other visual skills around Edinburgh. This space will later feature independent classes, including your own.</p>
+        </div>
+        <a href="mailto:hello@edinburghartguide.co.uk?subject=Suggest%20an%20art%20class">Suggest a class</a>
+      </section>
+
+      <section class="section-head">
+        <div>
+          <h2>What’s happening</h2>
+          <p><span id="resultCount">0</span> listings from <span id="venueCount">0</span> venues</p>
+        </div>
+        <button id="resetFilters" type="button">Reset</button>
+      </section>
+
+      <section id="cards" class="cards" aria-live="polite"></section>
+
+      <details class="about">
+        <summary>About & sources</summary>
+        <p>Edinburgh Art Guide is an independent visual arts listings site. Always check the official venue page before travelling or booking.</p>
+        <ul id="sourceList"></ul>
+      </details>
+    </main>
+
+    <footer>
+      <nav><a href="#top">Back to top ↑</a><a href="mailto:hello@edinburghartguide.co.uk">Contact</a><a href="mailto:hello@edinburghartguide.co.uk?subject=Suggest%20an%20event">Suggest an event</a></nav>
+      <p>Edinburgh Art Guide, visual arts listings for Edinburgh.</p>
+    </footer>
+
+    <template id="cardTemplate">
+      <article class="card">
+        <div class="date"><span class="day"></span><span class="month"></span></div>
+        <div class="poster"><span class="poster-emoji"></span><span class="poster-label"></span></div>
+        <div class="card-body">
+          <div class="topline"><span class="type"></span><span class="price"></span></div>
+          <h3></h3>
+          <p class="meta"></p>
+          <p class="description"></p>
+          <div class="tags"></div>
+          <div class="actions"><a class="calendar" target="_blank" rel="noreferrer">Add to calendar</a><a class="source" target="_blank" rel="noreferrer">Official page</a></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js?v=20260427-1" defer></script>
+  </body>
+</html>
