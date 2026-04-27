@@ -1,21 +1,21 @@
 .search-wrap {
   position: relative;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+  align-items: center;
   gap: 0;
   border-radius: 16px;
-  padding: 0 64px 0 0;
+  padding: 0 14px 0 0;
+  overflow: hidden;
 }
 
 .search-wrap::after {
   content: '→';
-  position: absolute;
-  right: 22px;
-  top: 50%;
-  transform: translateY(-52%);
   color: var(--purple);
   font-size: 2rem;
   line-height: 1;
   pointer-events: none;
+  padding-left: 14px;
 }
 
 .search-wrap .search-glyph {
@@ -26,18 +26,21 @@
 }
 
 .search-wrap input {
+  min-width: 0;
   padding: 0 14px;
 }
 
 .search-wrap .filter-toggle {
   position: relative;
-  align-self: center;
-  display: inline-flex;
+  grid-column: auto !important;
+  align-self: center !important;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   width: 46px;
   height: 46px;
-  padding: 0;
+  min-height: 0 !important;
+  padding: 0 !important;
   border: 0;
   border-radius: 13px;
   background: transparent;
@@ -49,7 +52,7 @@
 .search-wrap .filter-toggle::after {
   content: '';
   position: absolute;
-  right: -10px;
+  right: -7px;
   top: 9px;
   bottom: 9px;
   width: 1px;
@@ -102,11 +105,11 @@
 }
 
 .compact-filters[open] {
-  margin-top: 18px;
+  margin: 12px 0 14px;
 }
 
 .compact-filters[open] .filter-row {
-  padding: 18px;
+  padding: 14px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: #fff;
@@ -114,22 +117,53 @@
 }
 
 @media(max-width:620px){
+  .hero-copy {
+    padding: 28px 20px !important;
+  }
+
+  .hero h1 {
+    margin-top: 0;
+    font-size: 2.15rem !important;
+  }
+
+  .hero p {
+    margin: 14px 0 22px;
+    font-size: 1rem;
+  }
+
   .search-wrap {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    padding-right: 56px;
+    grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+    min-height: 56px;
+    padding-right: 12px;
   }
 
   .search-wrap::after {
-    right: 17px;
-    font-size: 1.8rem;
+    font-size: 1.65rem;
+    padding-left: 10px;
   }
 
   .search-wrap .search-glyph {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
+    padding-left: 16px;
   }
 
   .search-wrap .filter-toggle {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-wrap .filter-toggle svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .quick-pills {
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .pill {
+    min-height: 44px;
+    padding: 0 12px;
   }
 }
