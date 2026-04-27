@@ -1,0 +1,74 @@
+.search-wrap {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0;
+  border-radius: 16px;
+  padding: 0 6px 0 0;
+}
+
+.search-wrap .search-glyph {
+  padding: 0 0 0 20px;
+  color: var(--purple);
+  font-size: 1.35rem;
+}
+
+.search-wrap input {
+  padding: 0 14px;
+}
+
+.search-wrap .filter-toggle {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #f4f0ff;
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.search-wrap .filter-toggle:hover,
+.search-wrap .filter-toggle:focus-visible {
+  background: #ebe4ff;
+  border-color: rgba(107, 63, 214, 0.28);
+  outline: none;
+}
+
+.search-wrap .filter-toggle:active {
+  transform: scale(0.98);
+}
+
+.search-wrap .filter-toggle svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.search-wrap .filter-toggle[aria-expanded="true"] {
+  background: linear-gradient(135deg, var(--purple), var(--purple-2));
+  border-color: transparent;
+  color: #fff;
+}
+
+.compact-filters {
+  scroll-margin-top: 18px;
+}
+
+@media(max-width:620px){
+  .search-wrap {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .search-wrap .filter-toggle {
+    width: 44px;
+    height: 44px;
+  }
+}
